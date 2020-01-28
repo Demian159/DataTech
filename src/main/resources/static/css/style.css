@@ -1,0 +1,235 @@
+/* Style resets */
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.container-fluid{
+  padding: 0px;
+}
+*{
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+}
+.col-12{
+  margin: 0px;
+}
+ul {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+a:visited{
+  text-decoration: none;
+  color: black;
+}
+a:active{
+  text-decoration: none;
+  color: black;
+}
+.navbar-brand{
+
+}
+/* Style resets END */
+
+/* Mobile */
+
+body{
+  background-image: url("../img/Fondos/gaming.png");
+  background-repeat:repeat;
+
+}
+.noPadding{
+  padding: 0px;
+}
+.noMargin{
+  margin: 0px;
+}
+.marginBottom{
+  margin-bottom: 4vh;
+}
+.banner{
+  margin: 0px;
+}
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contorno{
+  border: solid black 2px;
+  border-radius: 10px;
+}
+.contornoFondo{
+  border: solid black 2px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5)
+}
+.producto{
+  margin-bottom: 1vh;
+}
+.fondo-header{
+  background-image: url('../img/circuits.jpg');
+  background-attachment:fixed;
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.menu{
+  padding: 10px;
+  transform: scale(2);
+  border-radius: 90px;
+  border: 5px solid black;
+  background-color: rgba(255,255,255,0.5);
+  color: #FF5733;
+  font-family: 'Orbitron', sans-serif;
+}
+.menuButton{
+  margin-bottom: 10px;
+}
+.menuLinks {
+  padding: 0px;
+  transform: scale(1.2);
+  border: solid;
+  background-color: rgba(255,255,255,0.5);
+  color: #FF5733;
+  font-family: 'Orbitron', sans-serif;
+}
+h1{
+  font-family: 'Orbitron';
+  font-weight: bold;
+  text-align: center;
+  color: #FF5733;
+}
+text-uppercase{
+  /* display: none; */
+  text-transform: uppercase;
+
+}
+.img-fluid{
+  border: 5px solid #000;
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+.circulo{
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.contornoVerde{
+  transform: scale(1.2);
+  border: 4px solid black;
+  background-color: rgba(255,255,255,0.5);
+  color: #FF5733;
+}
+
+.footer{
+  font-size: 2vh;
+  font-weight: bold;
+  padding: 0;
+  padding-top: 2vh;
+  margin: 0;
+  background-color: #FF5733;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+.dato{
+  flex-direction: column;
+}
+.contraseñaReset{
+  flex-direction: column;
+}
+.flexColumn{
+  flex-direction: column;
+}
+
+
+
+
+    /* -----COSAS LOCAS DE LUCAS---- */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 150px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+    /* ----------TERMINAN COSAS LOCAS DE LUCAS----------- */
+@media (min-width: 720px) {
+  .mdMenu{
+    background-color: #FF5733;
+  }
+
+}

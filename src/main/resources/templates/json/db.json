@@ -1,0 +1,110 @@
+{
+  "productos": [
+    {
+      "id": "0",
+      "tipo": "CPU",
+      "nombre": "Ryzen 3800x",
+      "marca": "AMD",
+      "precio": "10000",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/CPU/AMD Ryzen 3950x.jpg",
+      "desc": "Procesador de 12 nucleos y 24 hilos. Reloj base de 3.8 Ghz"
+    },
+    {
+      "id": "1",
+      "tipo": "RAM",
+      "nombre": "Trident Royal 16Gb 3600mhz",
+      "marca": "G.Skill",
+      "precio": "12000",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/RAM/G-SKILL Trident Royal 8GBx2.png",
+      "desc": "Kit Trident Royal 8Gb 3600mhz x 2"
+    },
+    {
+      "id": "2",
+      "tipo": "Gabinete",
+      "nombre": "H510I Matte White",
+      "marca": "NZXT",
+      "precio": "2500",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/Gab/NZXT H510I Matte White.jpg",
+      "desc": "Gabinete Blanco"
+    },
+    {
+      "id": "3",
+      "tipo": "PlacaMadre",
+      "nombre": "Rog Crosshair vIII HERO X570",
+      "marca": "ASUS",
+      "precio": "50000",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/Mother/ASUS Rog Crosshair vIII HERO X570.png",
+      "desc": "Mother AMD X570 ATX con PCIe 4.0, 16 power stages, OptiMem III, Wi-Fi integrado 6 (802.11ax), LAN de 5 Gbps, USB 3.2, SATA, M.2, ASUS NODE e iluminación Aura Sync RGB"
+    },
+    {
+      "id": "4",
+      "tipo": "Almacenamiento",
+      "nombre": "SSD 970 PRO 1TB",
+      "marca": "Samsung",
+      "precio": "30000",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/Disco/Samsung SSD 970 PRO 1TB.jpg",
+      "desc": "El SSD 970 PRO proporciona un rendimiento sobresaliente gracias a la interfaz NVMe de Samsung. La última tecnología V-NAND, junto con su nueva controladora Phoenix y su compacto tamaño M.2 (2280) hacen que el nuevo SSD de Samsung supere con creces las expectativas de cualquier usuario, hasta del profesional. Ideal para terminales u ordenadores que tengan que hacer frente a elevadas cargas de trabajo"
+    },
+    {
+      "id": "5",
+      "tipo": "Refrigeracion",
+      "nombre": "Liquid Cooler KRAKEN X52",
+      "marca": "NZXT",
+      "precio": "30000",
+      "modelo": "0X2548754",
+      "img": "img/Productos/Desktop/Coolers/NZXT Liquid Cooler KRAKEN X52.jpg",
+      "desc": "El diseño mejorado logra un enfriamiento superior con eficiencia mientras mantiene la acústica al mínimo"
+    },
+    {
+      "id": "6",
+      "tipo": "CPU",
+      "nombre": "Memoria RAM DDR4 8GB",
+      "marca": "Kingston",
+      "precio": "2500",
+      "modelo": "0X2548754",
+      "img": "C://directorioLocal/img/imagenDelProducto.jpg",
+      "desc": "Memoria RAM para Notebooks DDR4 de 8GB. 1 Año de garantía."
+    },
+    {
+      "id": "7",
+      "tipo": "CPU",
+      "nombre": "Memoria RAM DDR4 8GB",
+      "marca": "Kingston",
+      "precio": "2500",
+      "modelo": "0X2548754",
+      "img": "C://directorioLocal/img/imagenDelProducto.jpg",
+      "desc": "Memoria RAM para Notebooks DDR4 de 8GB. 1 Año de garantía."
+    },
+    {
+      "id": "8",
+      "tipo": "CPU",
+      "nombre": "Memoria RAM DDR4 8GB",
+      "marca": "Kingston",
+      "precio": "2500",
+      "modelo": "0X2548754",
+      "img": "C://directorioLocal/img/imagenDelProducto.jpg",
+      "desc": "Memoria RAM para Notebooks DDR4 de 8GB. 1 Año de garantía."
+    }
+   ],
+   "servicios": [
+      {
+        "id": 1,
+        "nombre": "Reparación Notebook",
+        "precio": 2200,
+        "img": "Https://algunaurl.com/imagenDelServicio.jpg",
+        "desc": "Reparación íntegra de notebooks (Hard y Soft)"
+      },
+      {
+        "id": 2,
+        "nombre": "Reparación PC",
+        "precio": 1500,
+        "img": "Https://algunaurl.com/imagenDelServicio.jpg",
+        "desc": "Reparación íntegra de PC (Hard y Soft)"
+      }
+   ]
+}
