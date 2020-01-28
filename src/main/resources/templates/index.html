@@ -1,77 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Orbitron%7CPlay%7CQuicksand&display=swap" rel="stylesheet">
-  <title>ServTecn</title>
-</head>
+<html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
+
+<head th:replace="layouts/fragmentos::head"></head>
+
 <body>
   <div class="container-fluid">
-    <header class="fondo-header">
-      <div class="logo-container">
-        <a href="index.html"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
-      </div>
-      <!-- Small Menu -->
-      <div class="smMenu  d-md-none">
-        <div class="d-flex justify-content-center">
-          <h1 class= "d-inline-flex text-uppercase contornoFondo">DH <br>Servicio Tecnico</h1>
-        </div>
-        <nav class="navbar navbar-expand-lg  d-flex d-md-none align-items-center justify-content-between">
-          <a class="navbar-brand col-12" href="#"></a>
-          <button class="menuButton navbar-toggler verde align-items-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <a class="menu">MENU</a><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="servicio.html">Reparación <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="FAQ.html">FAQ</a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-            <br>
-          </div>
-          <a class="navbar-brand contornoVerde circulo loginButton" href="login.html"data-tooltip="LOGIN"><h2><ion-icon name="log-in" size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo usuarioButton" href="usuario.html" data-tooltip="PERFIL"><h2><ion-icon name="person"size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo carritoButton" href="carrito.html"data-tooltip="CARRITO"><h2><ion-icon name="cart"size="large"></ion-icon></h2></a>
-        </div>
-        <!-- Medium Menu  -->
-        <div class="mdMenu col-12 row d-none d-md-flex">
-          <ul class="ml-auto d-flex justify-content-around col-md-8">
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-3">
-              <a class="nav-link" href="servicio.html">Reparación<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="FAQ.html">Ayuda</a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="contacto.html">CONTACTO</a>
-            </li>
-          </ul>
-          <a class="navbar-brand noPadding-Margin loginButtonMD no-gutters col-md-1" href="login.html"data-tooltip="LOGIN"><ion-icon name="log-in" size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin usuarioButtonMD no-gutters col-md-1" href="usuario.html" data-tooltip="PERFIL"><ion-icon name="person"size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin carritoButtonMD no-gutters col-md-1" href="carrito.html"data-tooltip="CARRITO"><ion-icon name="cart"size="large"></ion-icon></a>
-        </div>
-      </header>
+    <header th:replace="layouts/fragmentos::header"></header>
              <!-- End Header Begins Main -->
       <main class="text-center col-12">
         <section class="">
@@ -169,19 +103,9 @@
         </section>
       </main>
                 <!-- End Main Begins Footer -->
-      <footer class="footer row col-12  d-flex justify-content-center ">
-        <ul class="col-12 d-flex justify-content-around">
-          <li><a class="d-flex col-2" href="index.html">Home</a></li>
-          <li><a class="d-flex col-2" href="contacto.html">Contacto</a></li>
-          <li><a class="d-flex col-2" href="FAQ.html">Ayuda</a></li>
-        </ul>
-        <br><br>
-      </footer>
+      <footer th:replace="layouts/fragmentos::footer"></footer>
 
-    </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      <div th:replace="layouts/fragmentos::scripts"></div>
+
+    </body>
   </html>

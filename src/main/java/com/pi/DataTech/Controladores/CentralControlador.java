@@ -35,7 +35,7 @@ public class CentralControlador {
 	public String imprimirProducto(Model model) {
 		return "producto";
 	}
-	@GetMapping ("/registro.html")
+	@GetMapping ("/registro")
 	public String imprimirRegistro(Model model) {
 		return "registro";
 	}
