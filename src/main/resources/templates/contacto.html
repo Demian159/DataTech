@@ -2,83 +2,13 @@
 <html lang="en" dir="ltr"><html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
 
 <head th:replace="layouts/fragmentos::head">
-  <link rel="stylesheet" href="css/contacto.css">
-  <script type="text/javascript" src="js/validacion.js">  </script>
+  <link rel="stylesheet" href="../../css/contacto.css" th:href="@{/css/contacto.css}">
+  <script type="text/javascript" src="../../js/validacion.js" th:src="@{/js/validacion.js}">  </script>
 </head>
 
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contacto.css">
-  <script type="text/javascript" src="js/validacion.js">  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto</title>
-</head>
 <body id="contacto">
   <div class="container-fluid">
-    <header class="fondo-header">
-      <div class="logo-container">
-        <a href="index.html"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
-      </div>
-      <!-- Small Menu -->
-      <div class="smMenu  d-md-none">
-        <div class="d-flex justify-content-center">
-          <h1 class= "d-inline-flex text-uppercase contornoFondo">DH <br>Servicio Tecnico</h1>
-        </div>
-        <nav class="navbar navbar-expand-lg  d-flex d-md-none align-items-center justify-content-between">
-          <a class="navbar-brand col-12" href="#"></a>
-          <button class="menuButton navbar-toggler verde align-items-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <a class="menu">MENU</a><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="servicio.html">Servicio Tecnico <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="FAQ.html">FAQ</a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-            <br>
-          </div>
-          <a class="navbar-brand contornoVerde circulo loginButton" href="login.html"data-tooltip="LOGIN"><h2><ion-icon name="log-in" size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo usuarioButton" href="usuario.html" data-tooltip="PERFIL"><h2><ion-icon name="person"size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo carritoButton" href="carrito.html"data-tooltip="CARRITO"><h2><ion-icon name="cart"size="large"></ion-icon></h2></a>
-        </div>
-        <!-- Medium Menu  -->
-        <div class="mdMenu col-12 row d-none d-md-flex">
-          <ul class="ml-auto d-flex justify-content-around col-md-8">
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-3">
-              <a class="nav-link" href="servicio.html">Servicio Tecnico <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="FAQ.html">Ayuda</a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="contacto.html">CONTACTO</a>
-            </li>
-          </ul>
-          <a class="navbar-brand noPadding-Margin loginButtonMD col-md-1" href="login.html"data-tooltip="LOGIN"><ion-icon name="log-in" size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin usuarioButtonMD col-md-1" href="usuario.html" data-tooltip="PERFIL"><ion-icon name="person"size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin carritoButtonMD col-md-1" href="carrito.html"data-tooltip="CARRITO"><ion-icon name="cart"size="large"></ion-icon></a>
-        </div>
-      </header>
+    <header th:replace="layouts/fragmentos::header"></header>
       <main class="">
         <br>
         <div class="row d-flex justify-content-center">
@@ -114,7 +44,9 @@
             <p>Telefono: <a href="call:11133456">11133456</a> </p>
             <p>E-mail: <a href="email:coso@gmail.com">coso@gmail.com</a> </p>
             <div class="map-google col-12 align-content-center" style="margin: 0px; padding: 0px;">
-              <iframe height="250em"style="margin: 0px; padding: 0px;" class= "col-12"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675.19776902906!2d-68.85065424176804!3d-32.88770899523461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0903818ffd51%3A0x51eec3b607614e5f!2sAv.%20Belgrano%201193%2C%20M5500CBA%20Mendoza!5e0!3m2!1ses-419!2sar!4v1573238709308!5m2!1ses-419!2sar"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              <iframe height="250em"style="margin: 0px; padding: 0px;" class= "col-12"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675.19776902906!2d-68.85065424176804!3d-32.88770899523461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0903818ffd51%3A0x51eec3b607614e5f!2sAv.%20Belgrano%201193%2C%20M5500CBA%20Mendoza!5e0!3m2!1ses-419!2sar!4v1573238709308!5m2!1ses-419!2sar"
+              frameborder="0"  allowfullscreen=""></iframe>
             </div>
             <br><br><br><br>
           </div>

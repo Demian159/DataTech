@@ -5,68 +5,7 @@
 
 <body>
   <div class="container-fluid">    ​
-    <header class="fondo-header">
-      <div class="logo-container">
-        <a href="index.html"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
-      </div>
-      <!-- Small Menu -->
-      <div class="smMenu  d-md-none">
-        <div class="d-flex justify-content-center">
-          <h1 class= "d-inline-flex text-uppercase contornoFondo">DH <br>Servicio Tecnico</h1>
-        </div>
-        <nav class="navbar navbar-expand-lg  d-flex d-md-none align-items-center justify-content-between">
-          <a class="navbar-brand col-12" href="#"></a>
-          <button class="menuButton navbar-toggler verde align-items-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <a class="menu">MENU</a><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="servicio.html">Servicio Tecnico <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="FAQ.html">FAQ</a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link menuLinks" href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-            <br>
-          </div>
-          <a class="navbar-brand contornoVerde circulo loginButton" href="login.html"data-tooltip="LOGIN"><h2><ion-icon name="log-in" size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo usuarioButton" href="usuario.html" data-tooltip="PERFIL"><h2><ion-icon name="person"size="large"></ion-icon></h2></a>
-          <a class="navbar-brand contornoVerde circulo carritoButton" href="carrito.html"data-tooltip="CARRITO"><h2><ion-icon name="cart"size="large"></ion-icon></h2></a>
-        </div>
-        <!-- Medium Menu  -->
-        <div class="mdMenu col-12 row d-none d-md-flex">
-          <ul class="ml-auto d-flex justify-content-around col-md-8">
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="catalogo.html">Productos <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-3">
-              <a class="nav-link" href="servicio.html">Servicio Tecnico <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="registro.html">Registro <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="FAQ.html">Ayuda</a>
-            </li>
-            <li class="nav-item text-center col-md-2">
-              <a class="nav-link" href="contacto.html">CONTACTO</a>
-            </li>
-          </ul>
-          <a class="navbar-brand noPadding-Margin loginButtonMD col-md-1" href="login.html"data-tooltip="LOGIN"><ion-icon name="log-in" size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin usuarioButtonMD col-md-1" href="usuario.html" data-tooltip="PERFIL"><ion-icon name="person"size="large"></ion-icon></a>
-          <a class="navbar-brand noPadding-Margin carritoButtonMD col-md-1" href="carrito.html"data-tooltip="CARRITO"><ion-icon name="cart"size="large"></ion-icon></a>
-        </div>
-      </header>
+    <header th:replace="layouts/fragmentos::header"></header>
       <main>
         <div class="row justify-content-center">
           <div class="col-12">

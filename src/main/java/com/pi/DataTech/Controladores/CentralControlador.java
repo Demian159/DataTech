@@ -21,7 +21,7 @@ public class CentralControlador {
 	}
 	@GetMapping ("/contacto")
 	public String imprimirContacto(Model model) {
-		return "contaco";
+		return "contacto";
 	}
 	@GetMapping ("/FAQ")
 	public String imprimirFAQ(Model model) {
