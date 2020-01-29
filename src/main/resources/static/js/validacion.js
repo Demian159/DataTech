@@ -15,7 +15,7 @@ repetirContraseña = document.querySelector("input[name=RepetirContraseña]");
 checkName = /^[^<>()[\].,;:\s@"]+(?:\.[^<>()[\].,;:\s@"]+)*@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
 checkNum = /([0-9])$/;
 checkLet = /([a-z])$/i;
-checkPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+checkPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,30}$/;
 expresionEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 
@@ -45,9 +45,8 @@ apellido.onchange = function (){
 }
 email.onchange = function (){
 
-  if (this.lenght >= 3 && this.lenght != ""){
-    alert("Tu email debe de ser más corto");
-    this.value = "";
+  if (this.lenght >= 30 && this.lenght != ""){
+    alert("Tu email debe de ser más corto y no puede estar vacio");
     event.preventDefault();
   }
   else if (!expresionEmail.test(this.value)) {
@@ -58,13 +57,12 @@ email.onchange = function (){
   }
 }
 
-//comprobar validaciones desde aca para abajo
 telefono.onchange = function (){
   if (this.value.lenght >= 30 && this.lenght != ""){
     alert("Tu teléfono debe de ser más corto")
     event.preventDefault();
   }
-  else if (checkLet.test(this)) {
+  else if (!checkNum.test(this.value)) {
     alert(" Tu teléfono debe contener solamente numeros")
     event.preventDefault();
   }
@@ -87,25 +85,28 @@ catch(error){
 }
 dni.onchange = function (){
   if (this.lenght >= 11 && this.lenght != ""){
-    alert("Tu CUIT debe de ser más corto")
+    alert("Tu DNI o CUIT debe de ser más corto")
     event.preventDefault();
   }
   else if (checkNum.Test(this)) {
     alert(" Tu DNI o CUIT debe contener solamente numeros ")
+    this.value = "";
     event.preventDefault();
   }
 
 }
 contraseña.onchange = function (){
-  if (checkPass.test(this)){
-    alert("La contraseña debe contener: \n Minimo 8 caracteres \n Maximo 15 \n Al menos una letra mayúscula \n Al menos una letra minucula \n Al menos un dígito \n No espacios en blanco \n Al menos 1 caracter especial");
+  if (!checkPass.test(this.value)){
+    alert("La contraseña debe contener: \n Minimo 6 caracteres \n Maximo 30 \n Al menos una letra mayúscula \n Al menos una letra minucula \n Al menos un dígito \n No espacios en blanco \n Al menos 1 caracter especial");
+    this.value = "";
     event.preventDefault();
   }
 
 }
 repetirContraseña.onchange = function (){
-  if (this === contraseña.value){
+  if (this.value != contraseña.value){
     alert("Debes repetir correctamente la contraseña")
+    this.value = "";
     event.preventDefault();
   }
 
