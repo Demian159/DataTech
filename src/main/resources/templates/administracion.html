@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
+
+<head th:replace="layouts/fragmentos::head"></head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="row align-items-center justify-content-between noPadding noMargin contornoFondoNegro">
+        <!-- <div class="col-12 col-sm-4 logo-container img-fluid" th:href="/" th:src="@{img/logo.png}" alt="Responsive image"></div>
+        <div class="col-12 col-sm-8 text-right" th:text="'Panel de Administración'"></div> -->
+        <section class="col-12 col-sm-4">
+          <div class="logo-container">
+            <a href="/"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
+          </div>
+        </section>
+        <section class="col-12 col-sm-6">
+          <h1 th:text="'Panel de Administración'" ></h1>
+        </section>
+      </div>
+    </header>
+    <main>
+      <br>
+      <div class="row">
+
+        <section class="col-12 col-sm-3 contornoFondoNegro justify-content-center">
+
+          <!-- <nav id="navbar-example3" class="navbar  contornoFondoNegro justify-content-center">
+          th:if="${usuarioLogueado} ? ${usuario.imagen} : @{img/Utiles/usuarioSinLoguear.svg} "
+          th:src="@{img/Utiles/usuarioSinLoguear.svg}"
+          <div class="userLogo" ></div>
+          th:text="${usuario.nombre}"
+
+
+          <img class="contornoFondoNaranja" src="../../img/Utiles/usuarioSinLoguear.svg" th:src="@{img/Utiles/usuarioSinLoguear.svg}" alt="">
+          <a class="navbar-brand" href="#"> Nombre de Usuario </a>
+          <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#item-1">Productos</a>
+          <a class="nav-link" href="#item-2">Categorias</a>
+          <nav class="nav nav-pills flex-column">
+          <a class="nav-link ml-3 my-1" href="#item-1-1">Categoria 1</a>
+          <a class="nav-link ml-3 my-1" href="#item-1-2">Categoria 2</a>
+        </nav>
+        <a class="nav-link" href="#item-3">Item 3</a>
+        <nav class="nav nav-pills flex-column">
+        <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+        <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
+      </nav>
+    </nav>
+  </nav> -->
+  <img class="contornoFondoNaranja" src="../../img/Utiles/usuarioSinLoguear.svg" th:src="@{img/Utiles/usuarioSinLoguear.svg}" alt="">
+  <a class="navbar-brand letraBlanca" href="#"> Nombre de Usuario </a>
+  <nav class=" sidebar contornoFondoNaranja">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Productos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+            Ordenes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Ventas
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Usuarios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            Reportes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/dashboard/#">
+            <ion-icon name="log-out" style="font-size: 24px;"></ion-icon>
+            Logout
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+</section>
+<section class="col-12 col-sm-9 contornoFondoNegro justify-content-center">
+  <div class="row justify-content-between">
+    <div class="col-6">
+      <h3 class="letraBlanca col-6 d-inline">Agregar Producto</h3>
+      <a href="#">
+        <ion-icon name="add-circle-outline" style="font-size: 32px;" class=" d-inline-block contornoFondoNaranja"></ion-icon>
+      </a>
+    </div>
+    <div class="searchBar">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 contornoFondoNaranja" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row contornoFondoNaranja d-flex padding">
+    <table class="table table-striped-dark table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Modificar / Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto1</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto2</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto3</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto4</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto5</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto6</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto7</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto8</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto9</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+        <tr>
+          <td class="nombreProducto"><span style="color: yellow;">NombreProducto10</span></td>
+          <td class="descProducto">DescripcionProducto</td>
+          <td class="precioProducto">PrecioProducto</td>
+          <td class="stockProducto">StockProducto</td>
+          <td>Modificar / Eliminar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="row justify-content-center letraBlanca">
+      <ul class="d-flex flex-row justify-content-around">
+        <li> << </li>
+        <li> | </li>
+        <li> 1 </li>
+        <li> | </li>
+        <li> 2 </li>
+        <li> | </li>
+        <li> 3 </li>
+        <li> | </li>
+        <li> 4 </li>
+        <li> | </li>
+        <li> 5 </li>
+        <li> | </li>
+        <li> >> </li>
+      </ul>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+
+</footer>
+</div>
+<div th:replace="layouts/fragmentos::scripts"></div>
+<script type="text/javascript" src="../../js/fetch.js" th:src="@{js/fetch.js}"></script>
+</body>
+</html>

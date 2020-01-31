@@ -43,5 +43,9 @@ public class CentralControlador {
 	public String imprimirUsuario(Model model) {
 		return "usuario";
 	}
+	@GetMapping ("/admin")
+	public String imprimirAdmin(Model model) {
+		return "administracion";
+	}
 
 }
