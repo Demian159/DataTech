@@ -84,7 +84,7 @@ body{
 .contornoFondoNaranja {
   border: solid black 2px;
   border-radius:10px;
-  background-color: #FF5733;
+  background-color: #EB6547;
 }
 .producto{
   margin-bottom: 1vh;
@@ -96,13 +96,14 @@ body{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
 .menu{
   padding: 10px;
   transform: scale(2);
   border-radius: 90px;
   border: 5px solid black;
   background-color: rgba(255,255,255,0.5);
-  color: #FF5733;
+  color: #EB6547;
   font-family: 'Orbitron', sans-serif;
 }
 .menuButton{
@@ -113,7 +114,7 @@ body{
   transform: scale(1.2);
   border: solid;
   background-color: rgba(255,255,255,0.5);
-  color: #FF5733;
+  color: #EB6547;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -121,7 +122,7 @@ h1{
   font-family: 'Orbitron';
   font-weight: bold;
   text-align: center;
-  color: #FF5733;
+  color: #EB6547;
 }
 text-uppercase{
   /* display: none; */
@@ -129,7 +130,7 @@ text-uppercase{
 
 }
 .img-fluid{
-  border: 5px solid #000;
+  /* border: 5px solid #000; */
   display: block;
   margin: auto;
   width: 30%;
@@ -148,7 +149,7 @@ text-uppercase{
   transform: scale(1.2);
   border: 4px solid black;
   background-color: rgba(255,255,255,0.5);
-  color: #FF5733;
+  color: #EB6547;
 }
 .letraBlanca{
   color: white;
@@ -160,7 +161,7 @@ text-uppercase{
   padding: 0;
   padding-top: 2vh;
   margin: 0;
-  background-color: #FF5733;
+  background-color: #EB6547;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -247,7 +248,7 @@ text-uppercase{
     /* ----------TERMINAN COSAS LOCAS DE LUCAS----------- */
 @media (min-width: 720px) {
   .mdMenu{
-    background-color: #FF5733;
+    background-color: #EB6547;
   }
 
 }
