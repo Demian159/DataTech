@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
 
-<head th:replace="layouts/fragmentos::head"></head>
+<head th:replace="layouts/heads::head1"></head>
 
 <body>
 
   <div class="container-fluid">
-    <header th:replace="layouts/fragmentos::header"></header>
+    <header th:replace="layouts/headers::header1"></header>
       <main class="row justify-content-center">
         <div class="row col-12 justify-content-center">
           <div class="col-5">
@@ -48,8 +48,8 @@
           </div>
         </div>
       </main>
-      <footer th:replace="layouts/fragmentos::footer"></footer>
+      <footer th:replace="layouts/footers::footer1"></footer>
 
-      <div th:replace="layouts/fragmentos::scripts"></div>
+      <div th:replace="layouts/scripts::scripts1"></div>
     </body>
     </html>

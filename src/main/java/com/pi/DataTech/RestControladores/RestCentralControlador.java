@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pi.DataTech.Entidades.Producto;
 
 @RestController
-public class RestPrincipalControlador {
+public class RestCentralControlador {
 	
 	@GetMapping("/producto2")
 	public Producto devolverProducto(){

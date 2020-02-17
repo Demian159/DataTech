@@ -1,0 +1,57 @@
+<header class="fondo-header" th:fragment="header1">
+  <div class="logo-container">
+    <a href="/"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
+  </div>
+  <!-- Small Menu -->
+  <div class="smMenu  d-md-none">
+    <div class="d-flex justify-content-center">
+      <h1 class= "d-inline-flex text-uppercase contornoFondo">DH <br>Servicio Tecnico</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg  d-flex d-md-none align-items-center justify-content-between">
+      <a class="navbar-brand col-12" href="#"></a>
+      <button class="menuButton navbar-toggler verde align-items-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="menu">MENU</a><span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item text-center">
+            <a class="nav-link menuLinks" href="catalogo">Productos <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link menuLinks" href="registro">Registro <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link menuLinks" href="contacto">Contacto</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link menuLinks" href="FAQ">FAQ</a>
+          </li>
+
+        </ul>
+        <br>
+      </div>
+      <a class="navbar-brand contornoVerde circulo loginButton" href="login"data-tooltip="LOGIN"><h2><ion-icon name="log-in" size="large"></ion-icon></h2></a>
+      <a class="navbar-brand contornoVerde circulo usuarioButton" href="usuario" data-tooltip="PERFIL"><h2><ion-icon name="person"size="large"></ion-icon></h2></a>
+      <a class="navbar-brand contornoVerde circulo carritoButton" href="carrito"data-tooltip="CARRITO"><h2><ion-icon name="cart"size="large"></ion-icon></h2></a>
+    </div>
+    <!-- Medium Menu  -->
+    <div class="mdMenu col-12 row d-none d-md-flex">
+      <ul class="ml-auto d-flex justify-content-around col-md-8">
+        <li class="nav-item text-center col-md-2">
+          <a class="nav-link" href="catalogo">Productos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item text-center col-md-2">
+          <a class="nav-link" href="registro">Registro <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item text-center col-md-2">
+          <a class="nav-link" href="contacto">Contacto</a>
+        </li>
+        <li class="nav-item text-center col-md-2">
+          <a class="nav-link" href="FAQ">Ayuda</a>
+        </li>
+      </ul>
+      <a class="navbar-brand noPadding-Margin loginButtonMD no-gutters col-md-1" href="login"data-tooltip="LOGIN"><ion-icon name="log-in" size="large"></ion-icon></a>
+      <a class="navbar-brand noPadding-Margin usuarioButtonMD no-gutters col-md-1" href="usuario" data-tooltip="PERFIL"><ion-icon name="person"size="large"></ion-icon></a>
+      <a class="navbar-brand noPadding-Margin carritoButtonMD no-gutters col-md-1" href="carrito"data-tooltip="CARRITO"><ion-icon name="cart"size="large"></ion-icon></a>
+    </div>
+  </header>
