@@ -1,50 +1,74 @@
 package com.pi.DataTech.Servicios.Imp;
 
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.pi.DataTech.Entidades.Producto;
+import com.pi.DataTech.Repositorios.IProductoRepositorio;
 import com.pi.DataTech.Servicios.IProductoServicio;
 
+@Service
 public class ProductoServicio implements IProductoServicio{
 	//Inyectar repositorio
-	
+	@Autowired
+	private IProductoRepositorio iProductoRepositorio;	
 	//Responsabilidades
 	@Override
 	public List<Producto> buscarTodosLosProductos() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Producto> productos = (List<Producto>) iProductoRepositorio.findAll();
+		return productos;
 	}
-
 	@Override
 	public Producto buscarProducto(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Producto> productoEncontrado= iProductoRepositorio.findById(id);
+//		if (productoEncontrado.isPresent()) {
+//			throw new Exception("pelicula no disponible");
+//		}
+		return productoEncontrado.get();
 	}
-
 	@Override
-	public List<Producto> buscarProductos(String titulo) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Producto> buscarProductos(String nombre) {
+		List<Producto> listaProductos = iProductoRepositorio.encontrarProductosPorNombres(nombre);
+		return listaProductos;
 	}
-
 	@Override
 	public boolean agregarProducto(Producto producto) {
-		// TODO Auto-generated method stub
-		return false;
+		if (checkNombreDisponible(producto)) {
+			iProductoRepositorio.save(producto);
+			return true;
+		}else {
+			return false;
+		}		
 	}
-
 	@Override
 	public boolean editarProducto(Producto producto) {
-		// TODO Auto-generated method stub
-		return false;
+		if(checkEdicionCorrecta(producto)){
+			iProductoRepositorio.save(producto);
+			return true;
+		}else {
+			return false;
+		}
 	}
-
 	@Override
 	public void eliminarProducto(Long id) {
-		// TODO Auto-generated method stub
-		
+		Producto productoABorrar = iProductoRepositorio.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalido Id:" + id));
+		iProductoRepositorio.delete(productoABorrar);		
 	}
-	
-	
-
+	private boolean checkNombreDisponible(Producto producto){
+		Producto productoEncontrado = iProductoRepositorio.encontrarProductoPorNombre(producto.getNombre()); 
+		if (productoEncontrado != null) {
+			return false;
+		}
+		return true;
+	}
+	private boolean checkEdicionCorrecta(Producto productoMod){
+		Producto productoOrig = iProductoRepositorio.findById(productoMod.getId()).get();
+		String a = productoMod.getNombre();
+		String b = productoOrig.getNombre();
+		boolean resultado = (a.equals(b)) ? true: false;
+		return resultado;
+	}
 }

@@ -10,8 +10,8 @@
       <main class="">
         <div class="row d-flex">
           <nav class="noPadding contorno col-4">
+            <br>
             <ul class="col-12 text-center">
-              <br>
               <li class="contorno marginBottom"><a href="#"><h5 class="noMargin">CPU</h5></a></li>
               <li class="contorno marginBottom"><a href="#"><h5 class="noMargin">RAM</h5></a></li>
               <li class="contorno marginBottom"><a href="#"><h5 class="noMargin">Placas Madre</h5></a></li>
@@ -24,47 +24,11 @@
           </nav>
           <div class="productContainer d-flex justify-content-center col-8">
             <div class="row">
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="../../img/Productos/Desktop/CPU/AMD Ryzen 3950x.jpg" th:src="@{img/Productos/Desktop/CPU/AMD Ryzen 3950x.jpg}" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
-              </article>
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
-              </article>
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
-              </article>
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
-              </article>
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
-              </article>
-              <article class="product justify-content-center col-12 col-sm-6 col-md-4">
-                <h2 class="nombreProducto">Producto</h2>
-                <div class="photo-container">
-                  <img class="imgProducto" width="100%"src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" alt="">
-                </div>
-                <p class="descProducto">Descripción</p>
+              <article class="product contornoDif justify-content-center col-12 col-sm-6 col-md-4" th:each="producto, iStat: ${listarTodo}" th:unless="${iStat.index > 8}">
+                <h2 th:text="${producto.nombre}">Producto Vacio</h2>
+                <img src="" th:src="${producto.img}" class="sizeimg col-12" alt="cpu">
+                <h3 th:text="${producto.precio} + '$'"></h3>
+                <br>
               </article>
             </div>
           </div>

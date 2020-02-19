@@ -5,20 +5,7 @@
 
 <body>
   <div class="container">
-    <header>
-      <div class="row align-items-center justify-content-between noPadding noMargin contornoFondoNegro">
-        <!-- <div class="col-12 col-sm-4 logo-container img-fluid" th:href="/" th:src="@{img/logo.png}" alt="Responsive image"></div>
-        <div class="col-12 col-sm-8 text-right" th:text="'Panel de Administración'"></div> -->
-        <section class="col-12 col-sm-4">
-          <div class="logo-container">
-            <a href="/"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
-          </div>
-        </section>
-        <section class="col-12 col-sm-6">
-          <h1 th:text="'Panel de Administración'" ></h1>
-        </section>
-      </div>
-    </header>
+    <header th:replace="layouts/headers::header2"></header>
     <main>
       <br>
       <div class="row">
@@ -49,7 +36,7 @@
     </nav>
   </nav> -->
   <img class="contornoFondoNaranja" src="../../img/Utiles/usuarioSinLoguear.svg" th:src="@{img/Utiles/usuarioSinLoguear.svg}" alt="">
-  <a class="navbar-brand letraBlanca" href="#"> Nombre de Usuario </a>
+  <h2 class="navbar-brand letraBlanca" href=""> Nombre de Usuario </h2>
   <nav class=" sidebar contornoFondoNaranja">
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
@@ -98,15 +85,15 @@
 </section>
 <section class="col-12 col-sm-9 contornoFondoNegro justify-content-center">
   <div class="row justify-content-between">
-    <div class="col-6">
-      <h3 class="letraBlanca col-6 d-inline">Agregar Producto</h3>
-      <a href="#">
+    <div class="d-inline">
+      <h3 class="letraBlanca">Agregar Producto</h3>
+      <a th:href="@{agregarProducto}">
         <ion-icon name="add-circle-outline" style="font-size: 32px;" class=" d-inline-block contornoFondoNaranja"></ion-icon>
       </a>
     </div>
     <div class="searchBar">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
+      <form class="form-inline my-2 my-lg-0"  method="post">
+        <input class="form-control mr-sm-2" name="nombre" type="search" placeholder="Escribe aquí..." aria-label="Search">
         <button class="btn btn-outline-dark my-2 my-sm-0 contornoFondoNaranja" type="submit">Buscar</button>
       </form>
     </div>
@@ -114,7 +101,7 @@
   <br>
   <div class="row contornoFondoNaranja d-flex padding">
     <table class="table table-striped-dark table-sm">
-      <thead class="thead-dark">
+      <thead class="thead-dark" style="letter-spacing: 3px;">
         <tr>
           <th>Nombre</th>
           <th>Descripcion</th>
@@ -124,75 +111,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto1</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto2</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto3</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto4</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto5</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto6</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto7</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto8</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto9</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
-        </tr>
-        <tr>
-          <td class="nombreProducto"><span style="color: yellow;">NombreProducto10</span></td>
-          <td class="descProducto">DescripcionProducto</td>
-          <td class="precioProducto">PrecioProducto</td>
-          <td class="stockProducto">StockProducto</td>
-          <td><ion-icon name="create"></ion-icon> / <ion-icon name="trash"></ion-icon></td>
+        <tr th:each="producto : ${listarTodo}">
+          <td class="nombreProducto" id="nombreProducto" th:text="${producto.nombre}"><span style="color: yellow;">NombreProducto1</span></td>
+          <td class="categoriaProducto" id="categoriaProducto" th:text="${producto.categoria}">DescripcionProducto</td>
+          <td class="precioProducto" id="precioProducto" th:text="${producto.precio}">PrecioProducto</td>
+          <td class="stockProducto" id="stockProducto" >StockProducto</td>
+          <td>
+            <a href="" th:href="@{/editar?id=} + ${producto.id}"><ion-icon style="font-size: 32px;" name="create"></ion-icon></a> /
+             <a href="" th:href="@{/delete?id=} + ${producto.id}"><ion-icon style="font-size: 32px;" name="trash"></ion-icon></a>
+           </td>
         </tr>
       </tbody>
     </table>
@@ -223,6 +150,7 @@
 </footer>
 </div>
 <div th:replace="layouts/fragmentos::scripts"></div>
-<script type="text/javascript" src="../../js/fetch.js" th:src="@{js/fetch.js}"></script>
+<!-- <script type="text/javascript" src="../../js/fetch.js" th:src="@{js/fetch.js}"></script> -->
+<!-- <script type="text/javascript" src="../../js/fetchApi.js" th:src="@{js/fetchApi.js}"></script> -->
 </body>
 </html>

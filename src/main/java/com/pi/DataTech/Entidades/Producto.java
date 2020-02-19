@@ -8,49 +8,42 @@ import javax.persistence.Id;
 
 @Entity
 public class Producto {
-	
-	
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Long id;
-	@Column
-	protected String tipo;
-	@Column
+	@Column(unique=true, nullable=false, length=30)
 	protected String nombre;
+	@Column
+	protected String categoria;
 	@Column
 	protected String marca;
 	@Column
 	protected Double precio;
-	@Column
+	@Column(length=50)
 	protected String modelo;
 	@Column
 	protected String img;
-	@Column
-	protected String desc;
-	@Column
-	protected String fechaRegistro;
-	
-	
+	@Column(length=250)
+	protected String descripcion;
 	//Getters and Setters
-	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 	public String getMarca() {
 		return marca;
@@ -76,25 +69,24 @@ public class Producto {
 	public void setImg(String img) {
 		this.img = img;
 	}
-	public String getDesc() {
-		return desc;
+	public String getDescripcion() {
+		return descripcion;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	//Constructor Vacio requerido por JPA
 	public Producto() {}	
 	//Constructor Sobrecargado
-	public Producto(String tipo, String nombre, String marca, Double precio, String modelo, String img,
-			String desc) {
-		super();
-		this.tipo = tipo;
-		this.nombre = nombre;
-		this.marca = marca;
-		this.precio = precio;
-		this.modelo = modelo;
-		this.img = img;
-		this.desc = desc;
-	}	
-
+//	public Producto(Categoria categoria, String nombre, Marca marca, Double precio, String modelo, String img,
+//			String descripcion) {
+//		super();
+//		this.categoria2 = categoria;
+//		this.nombre = nombre;
+//		this.marca2 = marca;
+//		this.precio = precio;
+//		this.modelo = modelo;
+//		this.img = img;
+//		this.descripcion = descripcion;
+//	}
 }

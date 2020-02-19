@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
-
 <head th:replace="layouts/heads::head1"></head>
-
 <body>
   <div class="container-fluid">
     <header th:replace="layouts/headers::header1"></header>
-             <!-- End Header Begins Main -->
+             <!-- Fin Header Inicio Main -->
       <main class="text-center col-12">
         <section class="">
           <br>
           <div class="row banner d-flex col-12 justify-content-center>">
+                <!-- Inicio Carrousel  -->
             <div id="myCarousel" class="carousel slide col-md-12 d-flex align-self-center" data-interval="3000" data-pause="hover" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -39,43 +38,21 @@
               </div>
             </div>
           </div>
+          <!-- Fin Carrousel -->
         </section>
         <section class="row col-12">
           <div class="col-12">
             <br><br>
-            <h2 id="ofertas">OFERTAS</h2>
+            <h2 id="ofertas">PRODUCTOS DESTACADOS</h2>
             <br><br>
           </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4">
-            <h2>AMD Ryzen 3950x</h2>
-            <img src="img\Productos\Desktop\CPU\AMD Ryzen 3950x.jpg" class="sizeimg col-12" alt="cpu">
-            <br><br>
-          </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4">
-            <h2>Trident Royal 8Gb x 2</h2>
-            <img src="img\Productos\Desktop\RAM\G-SKILL Trident Royal 8GBx2.png" class="sizeimg col-12" alt="RAM">
-            <br><br>
-          </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4">
-            <h2>NZXT H510I Matte White</h2>
-            <img src="img\Productos\Desktop\Gab\NZXT H510I Matte White.jpg" class="sizeimg col-12" alt="gab">
-            <br><br>
-          </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4">
-            <h2>ASUS Rog Crosshair vIII HERO X570</h2>
-            <img src="img\Productos\Desktop\Mother\ASUS Rog Crosshair vIII HERO X570.png" class="sizeimg col-12" alt="Mother">
-            <br><br>
-          </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4">
-            <h2>Samsung SSD 970 PRO 1TB</h2>
-            <img src="img\Productos\Desktop\Disco\Samsung SSD 970 PRO 1TB.jpg" class="sizeimg col-12" alt="disco">
-            <br><br>
-          </div>
-          <div class="producto contorno col-12 col-sm-6 col-md-6 col-lg-4 sizeimg">
-            <h2>NZXT Liquid Cooler KRAKEN X52</h2>
-            <img src="img\Productos\Desktop\Coolers\NZXT Liquid Cooler KRAKEN X52.jpg" class="sizeimg col-12" alt="Coolers">
-          </div>
-          <br><br><br><br><br><br>
+          <article class="producto contornoFondoNaranja col-12 col-sm-6 col-md-6 col-lg-4" th:each="producto, iStat: ${listarTodo}" th:unless="${iStat.index > 5}">
+            <h2 th:text="${producto.nombre}">Producto Vacio</h2>
+            <img src="" th:src="${producto.img}" class="sizeimg col-12" alt="cpu">
+            <h3 th:text="${producto.precio} + '$'"></h3>
+            <br>
+          </article>
+          <br><br><br><br>
         </section>
         <section class="row col-12">
           <div class="col-12 col-md-4">

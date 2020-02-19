@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
+<head th:replace="layouts/heads::head1"></head>
+<body>
+  <div class="container">
+    <header th:replace="layouts/headers::header2"></header>
+    <main>
+      <h1>Agregar Producto</h1>
+    	<div class="form text_field row d-flex justify-content-center">
+    		<form class="col-8 d-flex flex-column justify-content-between" th:action="@{/agregoProducto}" th:object="${producto}" method="post">
+          <br>
+          <div class="card contornoFondoNaranja noPadding">
+            <p class="align-self-center noMargin" style="font-weight: bold; font-size: 20px;" th:text="${alerta}"></p>
+          </div>
+    			<input class="" type="hidden" th:field="*{id}" />
+    			<label>Nombre:</label>
+    			<input class="" type="text" th:field="*{nombre}" /> <br>
+          <label>Categoria:</label>
+    			<input class="" type="text" th:field="*{categoria}" /> <br>
+          <label>Marca:</label>
+    			<input class="" type="text" th:field="*{marca}" /> <br>
+          <label>Precio:</label>
+    			<input class="" type="text" th:field="*{precio}" /> <br>
+          <label>Modelo:</label>
+    			<input class="" type="text" th:field="*{modelo}" /> <br>
+          <label>Dirección imagen:</label>
+    			<input class="" type="text" th:field="*{img}" /> <br>
+          <label>Descripcion</label>
+    			<input class="" type="text" th:field="*{descripcion}" /> <br>
+          <div class="align-self-center">
+    			<button type="submit" class="btn-lg btn-dark">Guardar</button>
+          </div>
+          <br>
+    		</form>
+    	</div>
+    </main>
+    <footer></footer>
+</div>
+<div th:replace="layouts/fragmentos::scripts"></div>
+</body>
+</html>
