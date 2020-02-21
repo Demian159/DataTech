@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http//www.thymeleaf.org">
-
-<head th:replace="layouts/head::head1"></head>
-
+<head th:replace="layouts/heads::head1"></head>
 <body>
   <div class="container-fluid">
     <header th:replace="layouts/headers::header1"></header>
       <main>
-        <div class="imagen">
+        <article class="imagen contornoDif2 bigPadding" th:object="${producto}">
+          <input class="" type="hidden" th:field="*{id}" />
+          <input class="" type="hidden" th:field="*{categoria}" />
+          <input class="" type="hidden" th:field="*{marca}" />
+          <input class="" type="hidden" th:field="*{modelo}" />
+          <h3 th:text="*{nombre}"></h3>
+          <img th:src="*{img}" class="img-fluid" alt="Responsive image">
           <br>
-          <h3>Disco Solido</h3>
-          <img src="img/Productos/Desktop/Disco/Ssd-Kingston-A400-240gb.jpg" class="img-fluid" alt="Responsive image">
-          <h4>$500,00</h4>
-          ​
-          <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-          ​
+          <h4 class="text-center"th:text="'Precio: ' + *{precio} + ' $'"></h4> ​
+          <br>
+          <button type="button" class="text-right btn btn-outline-dark btn-lg contornoFondoNaranja">Comprar</button>
+          <br>
           <h4>Descripcion producto</h4>
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
-          </div>
+          <p class="text-justify" th:text="*{descripcion}"></p>
+        </article>
           ​    </main>
           <footer th:replace="layouts/footers::footer1"></footer>
 

@@ -25,10 +25,12 @@
           <div class="productContainer d-flex justify-content-center col-8">
             <div class="row">
               <article class="product contornoDif justify-content-center col-12 col-sm-6 col-md-4" th:each="producto, iStat: ${listarTodo}" th:unless="${iStat.index > 8}">
+                <a th:href="@{/producto?id=} + ${producto.id}">
                 <h2 th:text="${producto.nombre}">Producto Vacio</h2>
                 <img src="" th:src="${producto.img}" class="sizeimg col-12" alt="cpu">
                 <h3 th:text="${producto.precio} + '$'"></h3>
                 <br>
+                </a>
               </article>
             </div>
           </div>

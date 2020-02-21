@@ -45,12 +45,8 @@ public class ProductoServicio implements IProductoServicio{
 	}
 	@Override
 	public boolean editarProducto(Producto producto) {
-		if(checkEdicionCorrecta(producto)){
-			iProductoRepositorio.save(producto);
-			return true;
-		}else {
-			return false;
-		}
+		iProductoRepositorio.save(producto);
+		return true;
 	}
 	@Override
 	public void eliminarProducto(Long id) {

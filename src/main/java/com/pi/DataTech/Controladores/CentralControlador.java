@@ -60,11 +60,13 @@ public class CentralControlador {
 		model.addAttribute("titulo", "Login");
 		return "login";
 	}
-	@GetMapping ("/producto")
-	public String imprimirProducto(Model model) {
+	@GetMapping("/producto")
+    public String imprimirProducto(@RequestParam("id") long id, Model model) {
 		model.addAttribute("titulo", "Producto");
-		return "producto";
-	}
+		Producto producto = iProductoServicio.buscarProducto(id);
+		model.addAttribute("producto",producto );
+        return "producto";
+    }
 	@GetMapping ("/registro")
 	public String imprimirRegistro(Model model) {
 		model.addAttribute("titulo", "Registro");

@@ -54,6 +54,9 @@ body{
 .padding{
   padding: 5px;
 }
+.bigPadding{
+  padding: 40px;
+}
 .noMargin{
   margin: 0px;
 }
@@ -92,6 +95,9 @@ body{
 .contornoDif{
   border: solid black 2px;
   border-radius: 10px;
+  background-color: rgba(0,0,0,0.2);
+}
+.contornoDif2{
   background-color: rgba(0,0,0,0.2);
 }
 .producto{
