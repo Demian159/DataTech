@@ -188,7 +188,7 @@ text-uppercase{
 
 
 
-    /* -----COSAS LOCAS DE LUCAS---- */
+    /* -----PROBANDO---- */
 [data-tooltip] {
   position: relative;
   z-index: 2;
@@ -254,7 +254,7 @@ text-uppercase{
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-    /* ----------TERMINAN COSAS LOCAS DE LUCAS----------- */
+    /* ----------TERMINA PROBANDO----------- */
 @media (min-width: 720px) {
   .mdMenu{
     background-color: #EB6547;
